@@ -1,0 +1,245 @@
+:root {
+  --background-color: #08111f;
+  --btn-color: #1a3755;
+  --btn-color--transparant: #1a355570;
+  --btn-color--correct: #1c5c21d5;
+  --btn-color--wrong: #4e1818d2;
+  --text-color: #eeeeee;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: "Itim", cursive;
+  font-weight: 500;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+.app {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 12rem;
+  align-items: center;
+  overflow: hidden;
+}
+
+.header {
+  margin-right: 2.4rem;
+}
+
+.title {
+  font-size: 9.8rem;
+  text-transform: uppercase;
+  text-shadow: rgba(255, 255, 255, 0.5) 0px 5px 15px;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.container {
+  height: 60%;
+  width: 56rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  gap: 3.4rem;
+  margin-bottom: 8.6rem;
+}
+
+.start-message {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.4rem;
+  margin-top: 3.2rem;
+}
+
+.start-message h1 {
+  font-size: 3.8rem;
+}
+
+.start-message p {
+  font-size: 2rem;
+  opacity: 0.9;
+}
+
+.question-container {
+  display: flex;
+  flex-direction: column;
+  width: 56rem;
+}
+
+.progress-container {
+  width: 100%;
+  margin-bottom: 6rem;
+}
+
+.progress {
+  height: 1.2rem;
+  width: 100%;
+  margin-bottom: 0.6rem;
+  appearance: none;
+}
+
+.progress[value]::-webkit-progress-bar {
+  background-color: #0c192b;
+  border-radius: 2rem;
+}
+
+.progress[value]::-webkit-progress-value {
+  background-color: #22548a;
+  transition: all 0.25s;
+  border-radius: 2rem;
+}
+
+.progress-details {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.8rem;
+  opacity: 0.8;
+}
+
+.question {
+  font-weight: inherit;
+  font-size: 2.6rem;
+  margin-bottom: 2.6rem;
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  width: 100%;
+  margin-bottom: 2.6rem;
+}
+
+.question-addons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1.6rem;
+}
+
+.btn.next {
+  align-self: flex-end;
+  background-color: var(--btn-color--transparant);
+}
+
+.timer {
+  text-align: center;
+  width: 14rem;
+  padding: 1.4rem 0;
+  border: 2px solid var(--btn-color);
+  color: var(--text-color);
+  font-family: inherit;
+  font-size: 2rem;
+  border-radius: 2.4rem;
+}
+
+.btn.btn-wide {
+  width: 100%;
+  text-align: left;
+  padding-left: 3rem;
+}
+
+.btn {
+  width: 14rem;
+  padding: 1.4rem 0;
+  background-color: var(--btn-color);
+  color: var(--text-color);
+  font-family: inherit;
+  font-size: 2rem;
+  border-radius: 2.4rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn:hover {
+  box-shadow: 0px 0px 10px rgb(160, 160, 160);
+}
+
+.btn:disabled {
+  cursor: not-allowed;
+}
+
+.btn:hover:disabled {
+  box-shadow: none;
+}
+
+.correct {
+  background-color: var(--btn-color--correct);
+}
+
+.wrong {
+  background-color: var(--btn-color--wrong);
+}
+
+.end-screen {
+  display: flex;
+  flex-direction: column;
+}
+
+.end-screen h3 {
+  background-color: var(--btn-color);
+  border-radius: 3.4rem;
+  font-size: 2.4rem;
+  font-weight: inherit;
+  padding: 2rem 6.8rem;
+  margin-top: 3.2rem;
+}
+
+.end-screen p {
+  text-align: center;
+  margin-top: 1.2rem;
+  font-size: 2rem;
+  opacity: 0.9;
+}
+
+.end-screen button {
+  margin-top: 8rem;
+  align-self: flex-end;
+}
+
+.error {
+  background-color: var(--btn-color);
+  border-radius: 2.4rem;
+  font-size: 2.4rem;
+  font-weight: inherit;
+  padding: 2rem 3.2rem;
+  margin-top: 6rem;
+}
+
+.loader {
+  width: 7rem;
+  margin-top: 6rem;
+  aspect-ratio: 4;
+  --_g: no-repeat radial-gradient(circle closest-side, #fff 90%, #0000);
+  background: var(--_g) 0% 50%, var(--_g) 50% 50%, var(--_g) 100% 50%;
+  background-size: calc(100% / 3) 100%;
+  animation: l7 1s infinite linear;
+}
+@keyframes l7 {
+  33% {
+    background-size: calc(100% / 3) 0%, calc(100% / 3) 100%, calc(100% / 3) 100%;
+  }
+  50% {
+    background-size: calc(100% / 3) 100%, calc(100% / 3) 0%, calc(100% / 3) 100%;
+  }
+  66% {
+    background-size: calc(100% / 3) 100%, calc(100% / 3) 100%, calc(100% / 3) 0%;
+  }
+}

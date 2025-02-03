@@ -4,11 +4,11 @@ A basic React quiz application built with Vite that fully utilizes `useReducer` 
 
 ## Deployment
 
-Deployed Website: [https://your-deployment-link.netlify.app](https://your-deployment-link.netlify.app)
+Deployed Website: https://quiz-it-stergios.netlify.app
 
 ## About The Project
 
-[![Homepage Preview](/public/homepage_preview.png)](https://your-deployment-link.netlify.app)
+[![Homepage Preview](/public/homepage_preview.png)](https://quiz-it-stergios.netlify.app)
 
 The React Quiz is a simple interactive quiz built with React and Vite. It features:
 

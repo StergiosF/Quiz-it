@@ -105,7 +105,7 @@ export default function App() {
     async function fetchQuestions() {
       dispatch({ type: "loading" });
       try {
-        const res = await fetch("http://localhost:8000/questions");
+        const res = await fetch("https://quiz-it-r4s0.onrender.com/questions");
 
         const data = await res.json();
 
